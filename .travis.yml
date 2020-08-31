@@ -1,25 +1,19 @@
 dist: trusty
 sudo: false
-
 language: node_js
 node_js:
-  - '10'
-
+- '10'
 addons:
   chrome: stable
-
 cache:
   directories:
-    - ./node_modules
-
+  - "./node_modules"
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
-
+- npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
 deploy:
   provider: heroku
   api_key:
-    secure: "b9c25487-4c49-43f5-91f3-8d7e30b6a397" 
+    secure: LLJ0jyNNytSeqP0uysIkqLWepDqz7jxcg9jn5G09znhyr3yWmjiO2iEJcfCVdlAZhY6P387GkAgj+rl3TZwr2rf5mefyZ0I7hH3iWMFFYuffcR+Qg+dfZikUfj4NQ76GYdVkWqPtcvG70iw4OoA/6Akp2ZoMCDrZ7hsLB9XhqXAIQcV5UsvJ5UOuqKvnfV1RKfobCGaANCb3+0mY6cG0EEGL1OLDvCSE7Wjb2IexLHCXiBzw6fr7BuY1pVe+e1UDLcTaK9CbYrNccvw6EcOFl5VTHWA3mmegu9z6drzc9ZLNf22AmCqXlxRRKvDDzDzX1U1fcJ1K6m4kyAbykKnYI+W7PZzJI9va91OzcvV+7i2e9dtPnhbExTJJ7Tx+E6kYU7MQXJGuqFQEJt1k8Xzd8OovFDggxWS1QMSwbCx1Ttb98L4P0xcpeonC68rpL1QNy/vx+Vhdxn7WaMmHdsKxQgZMZci+/EGDwI8ForOuIZvK+1ab03I9C6m8kNVT0vflURlERStnaylvFOfmy6MUZeVvcyg95oWo/rpl4hq/qb7YaxeO+mmvxszuLyHWiLtf00NutGPEOl5679JdUm4MbsVwajIqNYGWQZdKwUZWGiJd/S2WWZHCqg79ZIAiWLmPe13L8V42BcZlxNJUf6XFwJOTHRpNSkcPR5yl6WJ+LLw=
   app: cicd-angular
