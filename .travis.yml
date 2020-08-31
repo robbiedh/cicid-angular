@@ -21,5 +21,5 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: 'b9c25487-4c49-43f5-91f3-8d7e30b6a397' 
+    secure: "b9c25487-4c49-43f5-91f3-8d7e30b6a397" 
   app: cicd-angular
